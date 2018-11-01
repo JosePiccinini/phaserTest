@@ -1,19 +1,19 @@
 module MyGame {
 
-	export class Level1 extends Phaser.State {
+		export class Level1 extends Phaser.State {
 
-		background: Phaser.Sprite;
-		music: Phaser.Sound;
-		player: MyGame.Player;
+				background : Phaser.Sprite;
+				player : MyGame.Paddle;
 
-		create() {
+				create() {
 
-			this.background = this.add.sprite(0, 0, 'level1');
+						this.background = this
+								.add
+								.sprite(0, 0, 'background');
 
-			this.player = new Player(this.game, 130, 284);
+						this.player = new Paddle(this.game, 130, 284);
+				}
 
 		}
 
-	}
-
-} 
+}
